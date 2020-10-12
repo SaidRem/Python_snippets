@@ -14,3 +14,24 @@ def is_leap(year):
 # A line break between functions
 # Two line breaks between classes
 # Add a space after ','
+# after ':' in dictionaries but not before.
+
+# In Python the best way to use multiple assignment in one line.
+
+
+a, b = 3, 5
+b, a = a, b
+a, b, c = ['apple', 'orange', 'cherry']
+
+user = ['Mike', 'Gibson', 12345]
+people = [user, ['Bob', 'Fox', 55555]]
+for (name, last, tel) in people:
+    print(name, tel)
+
+# The generator expressions calculate one value at a time, when necessary.
+# Generator saves memory.
+
+total = sum(num**2 for num in range(100))
+
+# Use a list comprehension when the expected result is the list.
+# Use a generator expression when the list is only an intermediate result.
