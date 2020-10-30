@@ -1,5 +1,5 @@
 # mistake #1
-# Do not use mutable in const
+# Do not use mutable in const.
 
 class House:
     cats = []
@@ -14,13 +14,13 @@ my_house.cats.append('Tom')
 print(my_house.cats)
 # >> ['Tom']
 print(office.cats)
-# >> ['Tom']   # Tom in office!!! -> Do not use mutable  in const
+# >> ['Tom']   # Tom in office!!! -> Do not use mutable  in const.
 
 
-# How to make it right
+# How to make it right.
 
 class House:
-    cats: list = None   # use None for const
+    cats: list = None   # use None for const.
 
     def __init__(self):
         self.cats = []
@@ -36,7 +36,7 @@ print(office.cats)
 
 
 # Mistake #2
-# Using defaults in functions
+# Using defaults in functions.
 import time as tm
 from datetime import datetime
 
@@ -77,11 +77,11 @@ Vacab = {
 
 
 # Mistake #4
-# Usig set for fast calc somtime unappropriate
+# Using set for fast calc sometimes inappropriate.
 
 numbers = [i for i in range(10)]
 
-# use in for fast search in list
+# use in for fast search in lists.
 
 if 5 in numbers:
     print('Five is here')
