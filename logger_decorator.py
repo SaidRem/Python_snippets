@@ -1,9 +1,13 @@
+# Decorator wraps a function and changes its behavior.
 import logging
+import time
 from functools import wraps
 from datetime import datetime
 
 
 def my_logger(orig_func):
+    """Decorator that logs the name of function,
+       its arguments and results of the function."""
     logging.basicConfig(filename=f'{orig_func.__name__}.log',
                         level=logging.INFO)
     
