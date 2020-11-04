@@ -22,3 +22,16 @@ def my_logger(orig_func):
         return orig_func(*args, **kwargs)
     
     return wrapper
+
+
+def my_timer(orig_func):
+
+    @wraps(orig_func)
+    def wrapper(*args, **kwargs):
+        t1 = time.time()
+        result = orig_func(*args, **kwargs)
+        t2 = time.time() - t1
+        print(f'The orig_func: {orig_func.__name__} ran in {t2} seconds'
+              f'result is: {result}')
+        return result
+    return wrapper
